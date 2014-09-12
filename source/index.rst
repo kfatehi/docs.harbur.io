@@ -1,6 +1,13 @@
 Introduction
 ============
 
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   applications/index
+
 What is Harbur?
 ---------------
 
