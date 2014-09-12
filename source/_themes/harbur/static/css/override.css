@@ -1,0 +1,84 @@
+@import url(//fonts.googleapis.com/css?family=Merienda+One);
+@import url(//fonts.googleapis.com/css?family=Playfair+Display:400,400italic);
+
+
+.site-main {
+  padding-top: 0px;
+}
+
+.blue {
+  background-color: #3586bd!important;
+}
+
+.blue h1, .blue h2, .blue h3, .blue h4, .blue  p, .blue i {
+  color: white;
+}
+
+.bg-2 {
+  background: #3984c0;
+  color: #FFF;
+}
+
+.p-50 {
+  padding: 120px 0!important;
+}
+
+#lr-widget {
+  height: 230px;
+}
+
+.signup-email {
+  height: 44px !important;
+}
+
+.navbar-brand {
+font-family: 'Merienda One', cursive;
+}
+
+.navbar-brand h1 {
+font-family: 'Merienda One', cursive;
+color: #3984c0;
+padding: 0px;
+font-size: 28px;
+font-weight:600;
+margin: 0 0 0 10px;
+font-size: 24px;
+line-height: 40em;
+line-height: 40px;
+}
+
+a .colored {
+color: #4fc680;
+}
+
+.navbar-brand img {
+  position: relative;
+  top: -5px;
+}
+
+
+.site-footer .copyright {
+  border-top: none;
+}
+
+/** Fix conflicts in DOC style **/
+
+header .navbar-brand {
+ padding: 15px 15px !important;
+}
+
+.site-header {
+position: relative;
+}
+
+body {
+  background: white !important;
+}
+
+.section {
+  padding: 0px 0px;
+}
+
+a.headerlink {
+    visibility: hidden;
+}
