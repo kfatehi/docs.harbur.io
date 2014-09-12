@@ -9,7 +9,7 @@ What is Harbur?
 What is Docker?
 ---------------
 
-`Docker <http://www.docker.io/>`__  is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud
+`Docker <http://www.docker.io/>`__  is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.
 
 
 What does Harbur provide?
