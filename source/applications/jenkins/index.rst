@@ -54,3 +54,13 @@ Jenkins Slaves
 --------------
 
 TBD
+
+CLI Commands
+------------
+
+Start Jenkins with a Jenkins Slave:
+
+.. sourcecode:: bash
+
+    docker run -d -P --name jenkins quay.io/harbur/jenkins
+    docker run -d --privileged --link=jenkins:master -v /var/run/docker.sock:/var/run/docker.sock spiddy/dind-jenkins-slave
