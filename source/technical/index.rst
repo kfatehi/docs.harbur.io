@@ -35,4 +35,4 @@ Once you board the ship, if you want to enter inside the container of an App, yo
 
     sudo nsenter --target $(docker inspect --format {{.State.Pid}} <container_name_or_id>) --mount --uts --ipc --net --pid
 
-*WARNING*: When you enter inside an App's container, you break the seal of the container. Either you should really know what you're doing or you're advised not enter. Any changes that are done directly on the container are not portable/upgradable/scalable. Installing/configuring things directly on the container is not persistent in time. Entering inside the container should be used for forensic analysis only.
+*WARNING*: When you enter inside an App's container, you break the seal of the container. Either you should really know what you're doing or you're advised not enter. Any changes that are done directly on the container are not portable, upgradable nor scalable. Installing or configuring things directly on the container is not persistent in time. Entering inside the container should be used for forensic analysis only.
