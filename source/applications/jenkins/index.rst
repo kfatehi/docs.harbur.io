@@ -26,7 +26,6 @@ Dedicated Domain Name
 
 We reserve a specific domain name for your Jenkins and we configure Jenkins with that domain name. This way Jenkins can generate your email notifications with references to the public domain name.
 
-
 Jenkins Theme
 -------------
 
@@ -42,11 +41,24 @@ Of course if you like the original design you can simply go to **Manage Jenkins 
 Jenkins Plugins
 ---------------
 
-The following plugins have been preinstalled on Jenkins:
+The following plugins have been preinstalled on Jenkins. You can find the documentation of each one on the links below:
 
-- `JQuery Plugin <https://wiki.jenkins-ci.org/display/JENKINS/jQuery+Plugin>`__ ``v1.7.2-1``
-- `Simple Theme Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin>`__ ``v0.3``
-- `Gravatar Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Gravatar+plugin>`__ ``v2.1``
+- `Static Code Analysis <https://wiki.jenkins-ci.org/display/JENKINS/Static+Code+Analysis+Plug-ins>`__
+- `DRY Plugin <https://wiki.jenkins-ci.org/display/JENKINS/DRY+Plugin>`__
+- `PMD Plugin <https://wiki.jenkins-ci.org/display/JENKINS/PMD+Plugin>`__
+- `FindBugs Plugin <https://wiki.jenkins-ci.org/display/JENKINS/FindBugs+Plugin>`__
+- `Checkstyle Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Checkstyle+Plugin>`__
+- `M2 Release Plugin <https://wiki.jenkins-ci.org/display/JENKINS/M2+Release+Plugin>`__
+- `Redmine Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Redmine+Plugin>`__
+- `Git Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin>`__
+- `Claim Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Claim+plugin>`__
+- `The Continuous Integration Game Plugin <https://wiki.jenkins-ci.org/display/JENKINS/The+Continuous+Integration+Game+plugin>`__
+- `Sonar Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Sonar+plugin>`__
+- `Delivery Pipeline Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Delivery+Pipeline+Plugin>`__
+- `AnsiColor Plugin <https://wiki.jenkins-ci.org/display/JENKINS/AnsiColor+Plugin>`__
+- `BitBucket Plugin <https://wiki.jenkins-ci.org/display/JENKINS/BitBucket+Plugin>`__
+- `Swarm Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Swarm+Plugin>`__
+- `Simple Theme Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Simple+Theme+Plugin>`__
 
 Jenkins Immutable Server & Data Volumes
 ---------------------------------------
@@ -56,14 +68,10 @@ Jenkins is installed using prepackaged `Docker <http://www.docker.com/>`__ conta
 Jenkins Slaves
 --------------
 
-TBD
+In order to keep Jenkins master as clean as possible it is recommended that all build executions are done on slave machines. There is a prepared container that can snap to the master during start-up and serve as Jenkins Docker-aware slave instance without any master preparation. To achieve this, swarm plugin is used. This makes the possibility to dynamically register slave machines.
 
-CLI Commands
-------------
-
-Start Jenkins with a Jenkins Slave:
+To start Jenkins docker-aware slave execute the following (replace ``<master_container_instance_name>`` with actual value)
 
 .. sourcecode:: bash
 
-    docker run -d -P --name jenkins quay.io/harbur/jenkins
-    docker run -d --privileged --link=jenkins:master -v /var/run/docker.sock:/var/run/docker.sock spiddy/dind-jenkins-slave
+    docker run -d --privileged --link=<master_container_instance_name>:master -v /var/run/docker.sock:/var/run/docker.sock spiddy/dind-jenkins-slave
