@@ -3,6 +3,9 @@
 Jenkins
 =======
 
+.. image:: /_static/images/jenkinsContainer.png
+    :class: img-responsive img-thumbnail
+
 What is Jenkins
 ---------------
 
