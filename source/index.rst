@@ -19,7 +19,7 @@ Harbur is a full-stack Application Lifecycle Management provider. It uses OSS so
 
 But that's not all: Harbur also provides an easy integration with 3rd party services so that you can extend your ecosystem as you wish. Monitoring, scaling and others. Instead of limiting our support to on-premise tools only, we embrace integration of known services - such as Github for example - in order to let you take control of the decisions of your own infrastructure.
 
-We find that the OSS community of the development tools is an excelent example of pristine work. The extensibily of those tools is one of their biggest advantages. Our objective is to create a reference point where you can find fully documented integration between those tools without the suffering.
+We find that the OSS community of the development tools is an excellent example of pristine work. The extensibily of those tools is one of their biggest advantages. Our objective is to create a reference point where you can find fully documented integration between those tools without the suffering.
 
 With Harbur you'll experience the flexibility and control of self-hosted solutions, and the speed and ease-of-use of SaaS providers.
 
